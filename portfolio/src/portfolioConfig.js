@@ -53,6 +53,10 @@ export const badgeLinks = [
 // Configurable Achievements (These are text accomplishments displayed under Achievements)
 export const achievements = [
   {
+    title: "GSSoC ’26 Open Source Track Selection",
+    desc: "Selected for GirlScript Summer of Code 2026 (Open Source Track) to contribute to open-source software development projects and collaborate with open-source communities."
+  },
+  {
     title: "Solved 200+ LeetCode problems",
     desc: "Built a solid background in data structures, design patterns, and analysis of algorithms by solving challenges daily."
   },
@@ -61,3 +65,4 @@ export const achievements = [
     desc: "Designed and engineered functional applications with responsive frontends, REST APIs, Atlas databases, and OAuth."
   }
 ];
+

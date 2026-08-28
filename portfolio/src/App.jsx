@@ -844,7 +844,7 @@ export default function App() {
               <div style={{ display: "flex", flexDirection: "column", gap: "16px" }}>
                 {badgeLinks.map((badge) => (
                   <div key={badge.id} className="glass-panel achievement-card" style={{ padding: "20px" }}>
-                    <div className="achievement-icon-wrapper" style={{ borderRadius: "8px", background: "rgba(0,164,239,0.1)", border: "1px solid rgba(0,164,239,0.2)" }}>
+                    <div className="achievement-icon-wrapper" style={{ borderRadius: "8px" }}>
                       <Icons.Microsoft />
                     </div>
                     <div className="achievement-content" style={{ width: "100%" }}>
@@ -886,7 +886,7 @@ export default function App() {
             <div className="section-subtitle">Academic milestones, education history, and goals.</div>
           </div>
 
-          <div className="edu-exp-grid" style={{ gridTemplateColumns: "1.1fr 0.9fr" }}>
+          <div className="edu-exp-grid">
             {/* Timelines */}
             <div>
               <h3 className="timeline-section-title">
@@ -950,8 +950,8 @@ export default function App() {
 
           <div className="connect-grid">
             {/* Email */}
-            <a href="mailto:vermapriyanka32892@gmail.com" className="connect-card" aria-label="Email">
-              <div className="connect-card-icon" style={{ background: "rgba(139,92,246,0.15)", border: "1px solid rgba(139,92,246,0.3)", color: "#a78bfa" }}>
+            <a href="mailto:priyankaverma.dev@gmail.com" className="connect-card" aria-label="Email">
+              <div className="connect-card-icon">
                 <Icons.Mail />
               </div>
               <div className="connect-card-info">
@@ -963,7 +963,7 @@ export default function App() {
 
             {/* LinkedIn */}
             <a href="https://www.linkedin.com/in/priyanka-verma-3a5031347/" target="_blank" rel="noopener noreferrer" className="connect-card" aria-label="LinkedIn">
-              <div className="connect-card-icon" style={{ background: "rgba(10,102,194,0.15)", border: "1px solid rgba(10,102,194,0.35)", color: "#60a5fa" }}>
+              <div className="connect-card-icon">
                 <Icons.Linkedin />
               </div>
               <div className="connect-card-info">
@@ -975,7 +975,7 @@ export default function App() {
 
             {/* GitHub */}
             <a href="https://github.com/PriyankaVerma2307" target="_blank" rel="noopener noreferrer" className="connect-card" aria-label="GitHub">
-              <div className="connect-card-icon" style={{ background: "rgba(255,255,255,0.06)", border: "1px solid rgba(255,255,255,0.12)", color: "#e2e8f0" }}>
+              <div className="connect-card-icon">
                 <Icons.Github />
               </div>
               <div className="connect-card-info">
@@ -985,21 +985,9 @@ export default function App() {
               <div className="connect-card-arrow"><Icons.ArrowUpRight /></div>
             </a>
 
-            {/* Resume */}
-            {/* <a href="/Priyanka_Resume.pdf" target="_blank" rel="noopener noreferrer" className="connect-card" aria-label="Resume">
-              <div className="connect-card-icon" style={{ background: "rgba(16,185,129,0.15)", border: "1px solid rgba(16,185,129,0.3)", color: "#34d399" }}>
-                <Icons.Download />
-              </div>
-              <div className="connect-card-info">
-                <span className="connect-card-label">Resume</span>
-                <span className="connect-card-value">View / Download PDF</span>
-              </div>
-              <div className="connect-card-arrow"><Icons.ArrowUpRight /></div>
-            </a> */}
-
             {/* LeetCode */}
             <a href="https://leetcode.com/u/PriyankaVermaJi/" target="_blank" rel="noopener noreferrer" className="connect-card" aria-label="LeetCode">
-              <div className="connect-card-icon" style={{ background: "rgba(248,159,27,0.12)", border: "1px solid rgba(248,159,27,0.3)", color: "#fbbf24" }}>
+              <div className="connect-card-icon">
                 <Icons.LeetCode />
               </div>
               <div className="connect-card-info">
@@ -1011,7 +999,7 @@ export default function App() {
 
             {/* X (Twitter) */}
             <a href="https://x.com/VermaVe23372" target="_blank" rel="noopener noreferrer" className="connect-card" aria-label="X (Twitter)">
-              <div className="connect-card-icon" style={{ background: "rgba(255,255,255,0.06)", border: "1px solid rgba(255,255,255,0.12)", color: "#e2e8f0" }}>
+              <div className="connect-card-icon">
                 <Icons.Twitter />
               </div>
               <div className="connect-card-info">
@@ -1020,18 +1008,6 @@ export default function App() {
               </div>
               <div className="connect-card-arrow"><Icons.ArrowUpRight /></div>
             </a>
-
-            {/* WhatsApp */}
-            {/* <a href="https://wa.me/919876543210" target="_blank" rel="noopener noreferrer" className="connect-card" aria-label="WhatsApp">
-              <div className="connect-card-icon" style={{ background: "rgba(37,211,102,0.12)", border: "1px solid rgba(37,211,102,0.3)", color: "#4ade80" }}>
-                <Icons.WhatsApp />
-              </div>
-              <div className="connect-card-info">
-                <span className="connect-card-label">WhatsApp</span>
-                <span className="connect-card-value">Chat Directly</span>
-              </div>
-              <div className="connect-card-arrow"><Icons.ArrowUpRight /></div>
-            </a> */}
           </div>
         </div>
       </section>
