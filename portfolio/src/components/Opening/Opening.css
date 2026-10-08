@@ -1,0 +1,795 @@
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap");
+
+/* =========================================
+   OPENING SCREEN
+========================================= */
+
+.opening {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+
+  background: #070809;
+  color: #f4f4f4;
+
+  font-family: "Space Mono", monospace;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+/* =========================================
+   BACKGROUND CODE RAIN
+========================================= */
+
+.code-rain {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.rain-column {
+  position: absolute;
+  top: -35%;
+
+  white-space: pre;
+
+  font-family: "Space Mono", monospace;
+  font-size: 11px;
+  line-height: 1.65;
+
+  color: #a9adb0;
+
+  animation-name: codeFall;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+
+  user-select: none;
+}
+
+@keyframes codeFall {
+  0% {
+    transform: translateY(-20%);
+  }
+
+  100% {
+    transform: translateY(150vh);
+  }
+}
+
+
+/* =========================================
+   COLORED TECH WORDS
+========================================= */
+
+.tech-rain {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+
+  pointer-events: none;
+}
+
+.tech-word {
+  position: absolute;
+  top: -150px;
+
+  font-family: "Space Mono", monospace;
+
+  font-size: 17px;
+  font-weight: 700;
+
+  letter-spacing: 1px;
+
+  writing-mode: vertical-rl;
+
+  animation: techFall 9s linear infinite;
+}
+
+.tech-word.pink {
+  color: #ff68ad;
+}
+
+.tech-word.green {
+  color: #63e5b2;
+}
+
+.tech-word.yellow {
+  color: #f4d35e;
+}
+
+.tech-word.blue {
+  color: #66b9ff;
+}
+
+@keyframes techFall {
+  0% {
+    transform: translateY(-150px);
+    opacity: 0;
+  }
+
+  15% {
+    opacity: 1;
+  }
+
+  80% {
+    opacity: 0.8;
+  }
+
+  100% {
+    transform: translateY(120vh);
+    opacity: 0;
+  }
+}
+
+
+/* =========================================
+   DARK CENTER OVERLAY
+========================================= */
+
+.opening::after {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  background:
+    radial-gradient(
+      circle at center,
+      rgba(7, 8, 9, 0.08) 0%,
+      rgba(7, 8, 9, 0.42) 48%,
+      rgba(7, 8, 9, 0.88) 100%
+    );
+
+  pointer-events: none;
+
+  z-index: 3;
+}
+
+
+/* =========================================
+   TOP LABEL
+========================================= */
+
+.opening-label {
+  position: absolute;
+
+  top: 28px;
+  left: 40px;
+
+  z-index: 10;
+
+  font-family: "Space Mono", monospace;
+
+  font-size: 14px;
+
+  letter-spacing: 0.5px;
+
+  color: #eeeeee;
+}
+
+.opening-label span {
+  color: #ff68ad;
+  margin-right: 8px;
+}
+
+
+/* =========================================
+   MAIN CONTENT
+========================================= */
+
+.opening-content {
+  position: relative;
+
+  z-index: 10;
+
+  width: min(650px, 90%);
+
+  text-align: center;
+}
+
+
+/* Initializing */
+
+.initializing {
+  margin-bottom: 22px;
+
+  padding-left: 5px;
+
+  text-align: left;
+
+  font-family: "Space Mono", monospace;
+
+  font-size: 16px;
+
+  color: #d5d5d5;
+}
+
+.initializing::first-letter {
+  color: #ff68ad;
+}
+
+
+/* =========================================
+   NAME
+========================================= */
+
+.opening-content h1 {
+  margin: 0;
+
+  font-family: "Space Mono", monospace;
+
+  font-size: clamp(40px, 6vw, 70px);
+
+  font-weight: 400;
+
+  letter-spacing: -2px;
+
+  color: #f4f4f4;
+
+  text-shadow:
+    0 0 18px rgba(255, 255, 255, 0.04);
+}
+
+.cursor {
+  color: #ff68ad;
+
+  animation: cursorBlink 0.9s infinite;
+}
+
+@keyframes cursorBlink {
+  0%,
+  45% {
+    opacity: 1;
+  }
+
+  50%,
+  100% {
+    opacity: 0;
+  }
+}
+
+
+/* =========================================
+   ROLE
+========================================= */
+
+.role {
+  margin-top: 18px;
+
+  font-family: "Space Mono", monospace;
+
+  font-size: 14px;
+
+  letter-spacing: 2px;
+
+  color: #cfcfcf;
+}
+
+.role span {
+  margin: 0 10px;
+
+  color: #666;
+}
+
+
+/* =========================================
+   GIRL WHO CODES
+========================================= */
+
+.girl-codes {
+  margin-top: 12px;
+
+  font-family: "Caveat", cursive;
+
+  font-size: 29px;
+
+  font-weight: 500;
+
+  letter-spacing: 0.5px;
+
+  color: #f1f1f1;
+}
+
+.girl-codes span {
+  color: #ff68ad;
+
+  font-size: 32px;
+}
+
+
+/* =========================================
+   LOADING BOX
+========================================= */
+
+.loading-box {
+  width: min(470px, 100%);
+
+  margin: 40px auto 0;
+
+  padding: 20px 23px;
+
+  border: 1px solid #666;
+
+  background: rgba(5, 6, 7, 0.78);
+
+  text-align: left;
+
+  box-shadow:
+    8px 8px 0 rgba(255, 255, 255, 0.035);
+
+  backdrop-filter: blur(3px);
+}
+
+.loading-box > div {
+  margin: 7px 0;
+
+  font-family: "Space Mono", monospace;
+
+  font-size: 13px;
+
+  line-height: 1.5;
+
+  color: #d6d6d6;
+}
+
+.loading-box > div span {
+  float: right;
+
+  color: #63e5b2;
+
+  font-weight: 700;
+}
+
+
+/* Ready */
+
+.loading-box .ready-line {
+  margin-top: 12px;
+
+  color: #ff68ad;
+}
+
+
+/* =========================================
+   PROGRESS BAR
+========================================= */
+
+.progress-row {
+  display: flex;
+
+  align-items: center;
+
+  gap: 13px;
+
+  margin-top: 15px !important;
+}
+
+.progress {
+  flex: 1;
+
+  height: 14px;
+
+  padding: 2px;
+
+  border: 1px solid #575757;
+
+  background: #0d0f10;
+}
+
+.progress-fill {
+  height: 100%;
+
+  background: #ff68ad;
+
+  transition: width 0.15s linear;
+
+  box-shadow:
+    0 0 8px rgba(255, 104, 173, 0.35);
+}
+
+.progress-row > span {
+  min-width: 40px;
+
+  color: #f4d35e !important;
+
+  float: none !important;
+
+  text-align: right;
+}
+
+
+/* =========================================
+   ENTER SECTION
+========================================= */
+
+.enter-wrapper {
+  margin-top: 32px;
+
+  text-align: left;
+
+  padding-left: 5px;
+}
+
+.enter-wrapper p {
+  margin: 0 0 13px;
+
+  font-family: "Space Mono", monospace;
+
+  font-size: 13px;
+
+  color: #d0d0d0;
+}
+
+
+/* =========================================
+   ENTER BUTTON
+========================================= */
+
+.enter-button {
+  position: relative;
+
+  padding: 14px 24px;
+
+  border: 1px solid #eeeeee;
+
+  background: transparent;
+
+  color: #ffffff;
+
+  font-family: "Space Mono", monospace;
+
+  font-size: 13px;
+
+  letter-spacing: 0.5px;
+
+  cursor: pointer;
+
+  transition:
+    background 0.25s ease,
+    color 0.25s ease,
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.enter-button:hover:not(:disabled) {
+  background: #ff68ad;
+
+  border-color: #ff68ad;
+
+  color: #070809;
+
+  transform: translate(-2px, -2px);
+
+  box-shadow:
+    6px 6px 0 #f4d35e;
+}
+
+.enter-button:active:not(:disabled) {
+  transform: translate(0, 0);
+
+  box-shadow: none;
+}
+
+.enter-button:disabled {
+  opacity: 0.35;
+
+  cursor: not-allowed;
+}
+
+
+/* =========================================
+   HANDWRITTEN NOTES
+========================================= */
+
+.note {
+  position: absolute;
+
+  z-index: 10;
+
+  font-family: "Caveat", cursive;
+
+  font-size: 22px;
+
+  font-weight: 500;
+
+  line-height: 1.15;
+
+  color: #e5e5e5;
+
+  pointer-events: none;
+}
+
+
+/* Left note */
+
+.note-left {
+  left: 7%;
+
+  bottom: 27%;
+
+  transform: rotate(-8deg);
+
+  color: #f0f0f0;
+}
+
+.note-left::after {
+  content: "↘";
+
+  display: block;
+
+  margin-top: 3px;
+
+  font-family: "Caveat", cursive;
+
+  font-size: 30px;
+
+  color: #ff68ad;
+}
+
+
+/* Right note */
+
+.note-right {
+  right: 7%;
+
+  top: 17%;
+
+  transform: rotate(7deg);
+
+  color: #f4d35e;
+}
+
+
+/* Bottom left */
+
+.note-bottom-left {
+  left: 6%;
+
+  bottom: 8%;
+
+  color: #63e5b2;
+}
+
+.note-bottom-left span {
+  color: #ff68ad;
+
+  font-size: 26px;
+}
+
+
+/* Bottom right */
+
+.note-bottom-right {
+  right: 7%;
+
+  bottom: 11%;
+
+  line-height: 1.5;
+
+  color: #bfc3c5;
+
+  transform: rotate(-3deg);
+}
+
+
+/* =========================================
+   SMALL DECORATIVE PLANT
+========================================= */
+
+.plant {
+  position: absolute;
+
+  z-index: 10;
+
+  left: 3%;
+
+  bottom: 5%;
+
+  font-size: 55px;
+
+  color: #63e5b2;
+
+  transform: rotate(-10deg);
+
+  opacity: 0.8;
+
+  pointer-events: none;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.footer-path {
+  position: absolute;
+
+  z-index: 10;
+
+  left: 40px;
+
+  bottom: 22px;
+
+  font-family: "Space Mono", monospace;
+
+  font-size: 12px;
+
+  color: #8d8d8d;
+}
+
+.footer-path span {
+  color: #ff68ad;
+}
+
+
+.year {
+  position: absolute;
+
+  z-index: 10;
+
+  left: 50%;
+
+  bottom: 22px;
+
+  transform: translateX(-50%);
+
+  font-family: "Space Mono", monospace;
+
+  font-size: 11px;
+
+  color: #777;
+}
+
+
+.made-by {
+  position: absolute;
+
+  z-index: 10;
+
+  right: 40px;
+
+  bottom: 20px;
+
+  font-family: "Caveat", cursive;
+
+  font-size: 16px;
+
+  line-height: 1;
+
+  text-align: right;
+
+  color: #999;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 768px) {
+  .opening {
+    min-height: 100svh;
+  }
+
+  .opening-label {
+    top: 18px;
+
+    left: 20px;
+
+    font-size: 12px;
+  }
+
+  .opening-content {
+    width: 88%;
+
+    padding-top: 30px;
+  }
+
+  .initializing {
+    font-size: 13px;
+
+    margin-bottom: 18px;
+  }
+
+  .opening-content h1 {
+    font-size: clamp(32px, 10vw, 48px);
+
+    letter-spacing: -1.5px;
+  }
+
+  .role {
+    font-size: 10px;
+
+    letter-spacing: 1px;
+
+    line-height: 1.8;
+  }
+
+  .role span {
+    margin: 0 5px;
+  }
+
+  .girl-codes {
+    font-size: 25px;
+  }
+
+  .loading-box {
+    margin-top: 28px;
+
+    padding: 16px;
+  }
+
+  .loading-box > div {
+    font-size: 10px;
+  }
+
+  .enter-wrapper {
+    margin-top: 25px;
+
+    padding-left: 0;
+  }
+
+  .enter-wrapper p {
+    font-size: 11px;
+  }
+
+  .enter-button {
+    width: 100%;
+
+    padding: 13px 10px;
+
+    font-size: 11px;
+  }
+
+  .tech-word {
+    font-size: 11px;
+  }
+
+  .note-left,
+  .note-right,
+  .note-bottom-left,
+  .note-bottom-right,
+  .plant,
+  .footer-path,
+  .year,
+  .made-by {
+    display: none;
+  }
+}
+
+
+/* =========================================
+   SMALL PHONES
+========================================= */
+
+@media (max-width: 420px) {
+  .opening-content h1 {
+    font-size: 31px;
+  }
+
+  .role {
+    font-size: 9px;
+  }
+
+  .girl-codes {
+    font-size: 23px;
+  }
+
+  .loading-box {
+    margin-top: 23px;
+  }
+
+  .loading-box > div {
+    font-size: 9px;
+  }
+
+  .progress {
+    height: 11px;
+  }
+}

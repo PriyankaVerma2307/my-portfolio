@@ -1,0 +1,1015 @@
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap");
+
+/* =========================================
+   EXPERIENCE SECTION
+========================================= */
+
+.experience-section {
+  position: relative;
+
+  min-height: 100vh;
+
+  margin-left: 220px;
+
+  padding: 70px 65px 130px;
+
+  background: #080808;
+
+  color: #f5f5f5;
+
+  font-family: "Space Mono", monospace;
+
+  overflow: hidden;
+}
+
+
+/* =========================================
+   BACKGROUND CODE
+========================================= */
+
+.experience-code-bg {
+  position: absolute;
+
+  inset: 0;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 42px;
+
+  pointer-events: none;
+
+  opacity: 0.035;
+
+  color: #fff;
+
+  font-size: 11px;
+
+  line-height: 2.3;
+
+  transform: rotate(-4deg) scale(1.1);
+
+  overflow: hidden;
+}
+
+.experience-code-bg span {
+  white-space: nowrap;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.experience-header {
+  position: relative;
+
+  z-index: 5;
+
+  display: flex;
+
+  align-items: flex-start;
+
+  justify-content: space-between;
+
+  margin-bottom: 35px;
+}
+
+.experience-label {
+  font-size: 11px;
+
+  letter-spacing: 2px;
+
+  text-transform: uppercase;
+
+  color: #999;
+}
+
+.experience-label span {
+  color: #ff4f9a;
+
+  font-weight: 700;
+}
+
+.experience-header-note {
+  position: absolute;
+
+  top: -18px;
+
+  right: 200px;
+
+  font-family: "Caveat", cursive;
+
+  font-size: 22px;
+
+  line-height: 0.9;
+
+  color: #ff4f9a;
+
+  transform: rotate(-5deg);
+}
+
+.experience-header-note span {
+  display: inline-block;
+
+  margin-left: 70px;
+
+  font-size: 27px;
+
+  transform: rotate(4deg);
+}
+
+.experience-status {
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  font-size: 9px;
+
+  letter-spacing: 1.5px;
+
+  color: #666;
+}
+
+
+/* =========================================
+   STATUS DOT
+========================================= */
+
+.status-dot {
+  width: 6px;
+  height: 6px;
+
+  border-radius: 50%;
+
+  background: #ff4f9a;
+
+  box-shadow:
+    0 0 8px rgba(255, 79, 154, 0.6);
+
+  animation: statusPulse 1.8s ease-in-out infinite;
+}
+
+@keyframes statusPulse {
+  0%,
+  100% {
+    opacity: 0.45;
+
+    transform: scale(0.8);
+  }
+
+  50% {
+    opacity: 1;
+
+    transform: scale(1.15);
+  }
+}
+
+
+/* =========================================
+   INTRO
+========================================= */
+
+.experience-intro {
+  position: relative;
+
+  z-index: 4;
+
+  margin-bottom: 65px;
+}
+
+.experience-command {
+  margin-bottom: 12px;
+
+  font-size: 11px;
+
+  letter-spacing: 1px;
+
+  color: #777;
+}
+
+.experience-command span {
+  color: #ff4f9a;
+
+  animation: cursorBlink 1s steps(1) infinite;
+}
+
+@keyframes cursorBlink {
+  50% {
+    opacity: 0;
+  }
+}
+
+.experience-intro h1 {
+  margin: 0;
+
+  font-size: clamp(48px, 6vw, 78px);
+
+  line-height: 0.95;
+
+  letter-spacing: -5px;
+
+  font-weight: 700;
+}
+
+.experience-intro h1 em {
+  font-family: "Caveat", cursive;
+
+  font-size: 1.15em;
+
+  font-weight: 500;
+
+  letter-spacing: -2px;
+
+  color: #ff4f9a;
+}
+
+.experience-intro p {
+  margin-top: 24px;
+
+  max-width: 600px;
+
+  font-size: 11px;
+
+  line-height: 1.9;
+
+  color: #777;
+}
+
+
+/* =========================================
+   TIMELINE
+========================================= */
+
+.experience-timeline {
+  position: relative;
+
+  z-index: 4;
+
+  max-width: 1150px;
+
+  padding-bottom: 30px;
+}
+
+
+/* Vertical line */
+
+.timeline-line {
+  position: absolute;
+
+  top: 0;
+  bottom: 0;
+
+  left: 20px;
+
+  width: 1px;
+
+  background:
+    linear-gradient(
+      to bottom,
+      transparent,
+      #303030 5%,
+      #303030 95%,
+      transparent
+    );
+}
+
+
+/* Animated pink line */
+
+.timeline-line::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: -1px;
+
+  width: 3px;
+
+  height: 120px;
+
+  background: #ff4f9a;
+
+  box-shadow:
+    0 0 12px rgba(255, 79, 154, 0.5);
+
+  animation: timelineMove 4s linear infinite;
+}
+
+@keyframes timelineMove {
+  0% {
+    top: 0;
+  }
+
+  100% {
+    top: calc(100% - 120px);
+  }
+}
+
+
+/* =========================================
+   EXPERIENCE ITEM
+========================================= */
+
+.experience-item {
+  position: relative;
+
+  display: grid;
+
+  grid-template-columns: 120px 1fr;
+
+  gap: 35px;
+
+  margin-bottom: 45px;
+}
+
+
+/* =========================================
+   TIMELINE MARKER
+========================================= */
+
+.timeline-marker {
+  position: absolute;
+
+  left: 9px;
+
+  top: 0;
+
+  z-index: 5;
+
+  width: 23px;
+  height: 23px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid #ff4f9a;
+
+  background: #080808;
+
+  color: #ff4f9a;
+
+  font-size: 8px;
+
+  transform: rotate(45deg);
+
+  transition:
+    background 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.timeline-marker span {
+  transform: rotate(-45deg);
+}
+
+.experience-item:hover .timeline-marker {
+  background: #ff4f9a;
+
+  color: #080808;
+
+  box-shadow:
+    0 0 20px rgba(255, 79, 154, 0.35);
+}
+
+
+/* =========================================
+   PERIOD
+========================================= */
+
+.experience-period {
+  padding-top: 4px;
+
+  padding-left: 50px;
+
+  font-size: 9px;
+
+  line-height: 1.6;
+
+  letter-spacing: 1.5px;
+
+  color: #555;
+}
+
+
+/* =========================================
+   EXPERIENCE CARD
+========================================= */
+
+.experience-card {
+  position: relative;
+
+  border: 1px solid #252525;
+
+  background:
+    linear-gradient(
+      120deg,
+      rgba(255, 255, 255, 0.025),
+      rgba(255, 255, 255, 0)
+    );
+
+  transition:
+    transform 0.4s ease,
+    border-color 0.4s ease,
+    background 0.4s ease;
+
+  overflow: hidden;
+}
+
+.experience-card::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 0;
+  height: 2px;
+
+  background: #ff4f9a;
+
+  transition: width 0.45s ease;
+}
+
+.experience-card:hover {
+  transform: translateY(-5px);
+
+  border-color: #3a3a3a;
+
+  background:
+    linear-gradient(
+      120deg,
+      rgba(255, 79, 154, 0.035),
+      rgba(255, 255, 255, 0.01)
+    );
+}
+
+.experience-card:hover::before {
+  width: 100%;
+}
+
+
+/* =========================================
+   CARD TOP
+========================================= */
+
+.experience-card-top {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 15px 22px;
+
+  border-bottom: 1px solid #1d1d1d;
+}
+
+.experience-type {
+  font-size: 8px;
+
+  letter-spacing: 2px;
+
+  color: #ff4f9a;
+}
+
+.experience-index {
+  font-size: 8px;
+
+  letter-spacing: 1px;
+
+  color: #444;
+}
+
+
+/* =========================================
+   CARD CONTENT
+========================================= */
+
+.experience-card-content {
+  display: grid;
+
+  grid-template-columns: 1.15fr 0.85fr;
+
+  gap: 35px;
+
+  padding: 28px;
+}
+
+
+/* =========================================
+   MAIN EXPERIENCE
+========================================= */
+
+.experience-main h2 {
+  margin: 0;
+
+  font-size: clamp(25px, 3vw, 38px);
+
+  line-height: 1;
+
+  letter-spacing: -2px;
+
+  font-weight: 700;
+
+  transition: color 0.3s ease;
+}
+
+.experience-item:hover .experience-main h2 {
+  color: #ff4f9a;
+}
+
+.experience-company {
+  margin-top: 10px;
+
+  font-size: 11px;
+
+  color: #777;
+}
+
+.experience-company::first-letter {
+  color: #ff4f9a;
+}
+
+
+/* =========================================
+   STACK
+========================================= */
+
+.experience-stack {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 7px;
+
+  margin-top: 22px;
+}
+
+.experience-stack span {
+  padding: 6px 9px;
+
+  border: 1px solid #292929;
+
+  background: #0b0b0b;
+
+  color: #777;
+
+  font-size: 8px;
+
+  transition:
+    color 0.25s ease,
+    border-color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.experience-stack span:hover {
+  color: #fff;
+
+  border-color: #ff4f9a;
+
+  transform: translateY(-2px);
+}
+
+
+/* =========================================
+   WORK DETAILS
+========================================= */
+
+.experience-work {
+  margin-top: 30px;
+}
+
+.work-title {
+  margin-bottom: 17px;
+
+  font-size: 8px;
+
+  letter-spacing: 2px;
+
+  color: #555;
+}
+
+.work-title span {
+  color: #ff4f9a;
+
+  margin-right: 6px;
+}
+
+.work-point {
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 12px;
+
+  margin-bottom: 12px;
+}
+
+.point-number {
+  flex-shrink: 0;
+
+  font-size: 8px;
+
+  color: #ff4f9a;
+
+  opacity: 0.8;
+}
+
+.work-point p {
+  margin: 0;
+
+  font-size: 10px;
+
+  line-height: 1.75;
+
+  color: #777;
+}
+
+
+/* =========================================
+   TERMINAL
+========================================= */
+
+.experience-terminal {
+  align-self: center;
+
+  border: 1px solid #242424;
+
+  background: #050505;
+
+  transition:
+    transform 0.4s ease,
+    border-color 0.4s ease;
+}
+
+.experience-item:hover .experience-terminal {
+  transform: translateY(-4px);
+
+  border-color: #383838;
+}
+
+
+/* Terminal header */
+
+.terminal-header {
+  display: flex;
+
+  align-items: center;
+
+  gap: 5px;
+
+  padding: 9px 11px;
+
+  border-bottom: 1px solid #1d1d1d;
+
+  color: #555;
+
+  font-size: 8px;
+}
+
+.terminal-header > span:last-child {
+  margin-left: 7px;
+}
+
+
+/* Terminal dots */
+
+.terminal-dot {
+  width: 6px;
+  height: 6px;
+
+  border-radius: 50%;
+
+  background: #555;
+}
+
+.terminal-dot.pink {
+  background: #ff4f9a;
+}
+
+.terminal-dot.yellow {
+  background: #777;
+}
+
+.terminal-dot.green {
+  background: #999;
+}
+
+
+/* Terminal body */
+
+.terminal-body {
+  padding: 22px 18px;
+
+  min-height: 190px;
+
+  font-size: 9px;
+
+  line-height: 1.6;
+}
+
+.terminal-body p {
+  margin: 0 0 5px;
+
+  color: #666;
+}
+
+.terminal-pink {
+  color: #ff4f9a;
+}
+
+.terminal-value {
+  margin-bottom: 14px !important;
+
+  color: #ddd !important;
+
+  padding-left: 10px;
+}
+
+.terminal-cursor {
+  margin-top: 15px !important;
+
+  color: #777 !important;
+}
+
+.terminal-cursor span {
+  color: #ff4f9a;
+}
+
+
+/* =========================================
+   HANDWRITTEN NOTES
+========================================= */
+
+.experience-note {
+  position: absolute;
+
+  z-index: 5;
+
+  font-family: "Caveat", cursive;
+
+  font-size: 20px;
+
+  line-height: 1.05;
+
+  color: #ff4f9a;
+
+  pointer-events: none;
+}
+
+.experience-note-one {
+  top: 400px;
+
+  right: 35px;
+
+  transform: rotate(6deg);
+}
+
+.experience-note-two {
+  bottom: 210px;
+
+  right: 45px;
+
+  text-align: right;
+
+  transform: rotate(-5deg);
+}
+
+
+/* =========================================
+   BOTTOM
+========================================= */
+
+.experience-bottom-left {
+  position: absolute;
+
+  left: 65px;
+
+  bottom: 35px;
+
+  font-family: "Caveat", cursive;
+
+  font-size: 18px;
+
+  color: #555;
+
+  transform: rotate(-2deg);
+}
+
+.experience-bottom-right {
+  position: absolute;
+
+  right: 45px;
+
+  bottom: 35px;
+
+  font-size: 9px;
+
+  letter-spacing: 1px;
+
+  color: #444;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1100px) {
+
+  .experience-section {
+    padding: 65px 45px 120px;
+  }
+
+  .experience-card-content {
+    grid-template-columns: 1fr;
+  }
+
+  .experience-terminal {
+    width: 100%;
+    max-width: 420px;
+  }
+
+  .experience-note-one {
+    display: none;
+  }
+
+}
+
+
+/* =========================================
+   SIDE MENU TABLET
+========================================= */
+
+@media (max-width: 800px) {
+
+  .experience-section {
+    margin-left: 175px;
+
+    padding: 60px 35px 110px;
+  }
+
+  .experience-header-note {
+    right: 80px;
+  }
+
+  .experience-item {
+    grid-template-columns: 95px 1fr;
+
+    gap: 25px;
+  }
+
+  .experience-period {
+    padding-left: 35px;
+  }
+
+  .experience-bottom-left {
+    left: 35px;
+  }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+  .experience-section {
+    margin-left: 0;
+
+    padding: 45px 20px 100px;
+  }
+
+  .experience-header {
+    margin-bottom: 45px;
+  }
+
+  .experience-header-note {
+    display: none;
+  }
+
+  .experience-status {
+    font-size: 7px;
+  }
+
+  .experience-intro {
+    margin-bottom: 45px;
+  }
+
+  .experience-intro h1 {
+    font-size: 48px;
+
+    letter-spacing: -3px;
+  }
+
+  .experience-intro p {
+    font-size: 10px;
+  }
+
+
+  /* Timeline */
+
+  .timeline-line {
+    left: 9px;
+  }
+
+  .experience-item {
+    display: block;
+
+    padding-left: 35px;
+
+    margin-bottom: 35px;
+  }
+
+  .timeline-marker {
+    left: -2px;
+  }
+
+  .experience-period {
+    padding: 0;
+
+    margin-bottom: 12px;
+
+    font-size: 8px;
+  }
+
+
+  /* Card */
+
+  .experience-card-content {
+    display: block;
+
+    padding: 22px 18px;
+  }
+
+  .experience-card-top {
+    padding: 13px 17px;
+  }
+
+  .experience-main h2 {
+    font-size: 27px;
+  }
+
+  .experience-company {
+    font-size: 10px;
+  }
+
+  .work-point p {
+    font-size: 9px;
+  }
+
+  .experience-terminal {
+    margin-top: 25px;
+
+    max-width: none;
+  }
+
+
+  /* Notes */
+
+  .experience-note-two {
+    display: none;
+  }
+
+  .experience-bottom-left {
+    left: 20px;
+
+    bottom: 28px;
+  }
+
+  .experience-bottom-right {
+    right: 20px;
+
+    bottom: 28px;
+  }
+
+}
+
+
+/* =========================================
+   REDUCED MOTION
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .status-dot,
+  .experience-command span,
+  .timeline-line::before {
+    animation: none;
+  }
+
+  .experience-card,
+  .experience-terminal,
+  .experience-stack span,
+  .timeline-marker {
+    transition: none;
+  }
+
+}

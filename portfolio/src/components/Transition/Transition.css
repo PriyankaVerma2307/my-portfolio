@@ -1,0 +1,957 @@
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap");
+
+
+/* =========================================
+   BASE
+========================================= */
+
+.transition {
+  min-height: 100vh;
+  width: 100%;
+
+  position: relative;
+  overflow: hidden;
+
+  background: #070b0d;
+  color: #f5f5f5;
+
+  font-family: "Space Mono", monospace;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================
+   CODE RAIN
+========================================= */
+
+.transition-code-rain {
+  position: absolute;
+  inset: 0;
+
+  overflow: hidden;
+
+  pointer-events: none;
+}
+
+.transition-rain-column {
+  position: absolute;
+  top: -300px;
+
+  color: #5b7280;
+
+  font-family: "Space Mono", monospace;
+  font-size: 12px;
+  line-height: 1.45;
+
+  white-space: pre;
+
+  animation: transitionRain linear infinite;
+}
+
+@keyframes transitionRain {
+  from {
+    transform: translateY(-100px);
+  }
+
+  to {
+    transform: translateY(130vh);
+  }
+}
+
+
+/* =========================================
+   TECH WORDS
+========================================= */
+
+.transition-tech-rain {
+  position: absolute;
+  inset: 0;
+
+  pointer-events: none;
+}
+
+.transition-tech-word {
+  position: absolute;
+  top: 55px;
+
+  writing-mode: vertical-rl;
+
+  font-family: "Space Mono", monospace;
+  font-size: 17px;
+  font-weight: 700;
+
+  opacity: 0.9;
+
+  animation: techFloat 7s ease-in-out infinite;
+}
+
+.transition-tech-word.pink {
+  color: #ff69b4;
+}
+
+.transition-tech-word.green {
+  color: #63f5b0;
+}
+
+.transition-tech-word.yellow {
+  color: #f4d35e;
+}
+
+.transition-tech-word.blue {
+  color: #63b9ff;
+}
+
+@keyframes techFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(35px);
+  }
+}
+
+
+/* =========================================
+   TOP LABEL
+========================================= */
+
+.transition-label {
+  position: absolute;
+
+  top: 32px;
+  left: 48px;
+
+  z-index: 10;
+
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+
+.transition-label span {
+  color: #ff6fb7;
+}
+
+
+/* =========================================
+   MAIN CONTENT
+========================================= */
+
+.transition-content {
+  position: relative;
+
+  z-index: 5;
+
+  width: min(700px, 90%);
+
+  margin-top: 30px;
+
+  text-align: center;
+}
+
+
+/* boot */
+
+.boot-line {
+  font-size: 16px;
+
+  margin-bottom: 34px;
+
+  color: #eeeeee;
+
+  text-align: left;
+
+  padding-left: 12px;
+}
+
+.pink-cursor {
+  color: #ff69b4;
+
+  margin-left: 5px;
+
+  animation: cursorBlink 1s infinite;
+}
+
+@keyframes cursorBlink {
+  50% {
+    opacity: 0;
+  }
+}
+
+
+/* heading */
+
+.transition-content h1 {
+  margin: 0;
+
+  font-family: "Space Mono", monospace;
+
+  font-size: clamp(42px, 5vw, 66px);
+
+  line-height: 1.18;
+
+  font-weight: 400;
+
+  letter-spacing: -2px;
+}
+
+
+/* handwritten */
+
+.starting-point {
+  display: inline-block;
+
+  margin-top: 18px;
+
+  font-family: "Caveat", cursive;
+
+  font-size: 48px;
+
+  color: #ff79bd;
+
+  transform: rotate(-4deg);
+
+  position: relative;
+}
+
+.starting-point::after {
+  content: "";
+
+  position: absolute;
+
+  left: 10%;
+  right: 0;
+
+  bottom: -5px;
+
+  height: 2px;
+
+  background: #ff79bd;
+
+  transform: rotate(-2deg);
+}
+
+
+/* =========================================
+   COMMAND
+========================================= */
+
+.start-command {
+  margin-top: 60px;
+
+  font-size: 18px;
+
+  color: #eeeeee;
+}
+
+.command-cursor {
+  color: #ff69b4;
+
+  animation: cursorBlink 1s infinite;
+}
+
+
+/* =========================================
+   BUTTON
+========================================= */
+
+.start-button {
+  margin-top: 32px;
+
+  padding: 15px 28px;
+
+  background: transparent;
+
+  border: 1px solid #eeeeee;
+
+  color: #eeeeee;
+
+  font-family: "Space Mono", monospace;
+
+  font-size: 14px;
+
+  cursor: pointer;
+
+  transition:
+    background 0.25s ease,
+    color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.start-button:hover {
+  background: #eeeeee;
+
+  color: #080b0d;
+
+  transform: translateY(-3px);
+}
+
+
+/* =========================================
+   GIRL (legacy image wrapper — unused now,
+   kept in case you switch back to an <img>)
+========================================= */
+
+.girl-wrapper {
+  position: absolute;
+
+  z-index: 4;
+
+  left: 17%;
+
+  bottom: 10px;
+
+  width: 310px;
+}
+
+.girl-wrapper img {
+  width: 100%;
+
+  display: block;
+
+  object-fit: contain;
+}
+
+
+/* =========================================
+   HAND DRAWN GIRL / SVG
+   (this is the one actually used in the JSX:
+   <div className="girl-sketch">)
+========================================= */
+
+.girl-sketch {
+  position: absolute;
+
+  left: 13%;
+  bottom: 28px;
+
+  width: 360px;
+  height: 330px;
+
+  z-index: 20;
+
+  pointer-events: none;
+}
+
+.girl-sketch svg {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+}
+
+@media (max-width: 900px) {
+  .girl-sketch {
+    left: 5%;
+    bottom: 25px;
+
+    width: 300px;
+    height: 275px;
+  }
+}
+
+@media (max-width: 600px) {
+  .girl-sketch {
+    left: 50%;
+    bottom: 38px;
+
+    width: 250px;
+    height: 230px;
+
+    transform: translateX(-50%);
+  }
+}
+
+@media (max-width: 380px) {
+  .girl-sketch {
+    width: 220px;
+    height: 205px;
+
+    bottom: 35px;
+  }
+}
+
+
+/* =========================================
+   PAPER PLANE
+========================================= */
+
+.paper-plane {
+  position: absolute;
+
+  right: 10%;
+
+  top: 34%;
+
+  z-index: 3;
+
+  transform: rotate(-12deg);
+}
+
+.plane {
+  font-size: 40px;
+
+  transform: rotate(-25deg);
+}
+
+.plane-path {
+  position: absolute;
+
+  width: 160px;
+
+  top: 45px;
+  right: 15px;
+
+  color: #eeeeee;
+
+  font-size: 16px;
+
+  letter-spacing: 4px;
+
+  transform: rotate(-20deg);
+}
+
+
+/* =========================================
+   NOTES
+========================================= */
+
+.transition-note {
+  position: absolute;
+
+  z-index: 5;
+
+  font-family: "Caveat", cursive;
+
+  font-size: 28px;
+
+  line-height: 1.05;
+
+  color: #eeeeee;
+}
+
+.note-small {
+  left: 7%;
+  top: 35%;
+
+  transform: rotate(-8deg);
+}
+
+.note-small span {
+  color: #ff69b4;
+}
+
+.note-arrow {
+  font-family: "Caveat", cursive;
+
+  font-size: 45px;
+
+  margin-left: 65px;
+
+  margin-top: 8px;
+
+  transform: rotate(20deg);
+}
+
+
+/* =========================================
+   CHECKLIST
+========================================= */
+
+.checklist {
+  position: absolute;
+
+  right: 7%;
+
+  bottom: 29%;
+
+  z-index: 5;
+
+  font-family: "Caveat", cursive;
+
+  font-size: 25px;
+
+  line-height: 1.3;
+
+  transform: rotate(-4deg);
+}
+
+.checklist span {
+  color: #63f5b0;
+
+  font-family: "Space Mono", monospace;
+}
+
+.check-heart {
+  color: #ff69b4;
+
+  font-size: 30px;
+
+  text-align: center;
+
+  margin-top: 5px;
+}
+
+
+/* =========================================
+   STARS
+========================================= */
+
+.star {
+  position: absolute;
+
+  z-index: 3;
+
+  color: #f4d35e;
+
+  font-size: 28px;
+}
+
+.star-one {
+  left: 25%;
+
+  top: 47%;
+}
+
+.star-two {
+  right: 17%;
+
+  top: 48%;
+
+  color: #ff69b4;
+}
+
+.star-three {
+  right: 22%;
+
+  top: 57%;
+
+  color: #f4d35e;
+}
+
+.pink-cross {
+  position: absolute;
+
+  left: 14%;
+  bottom: 37%;
+
+  color: #ff69b4;
+
+  font-size: 28px;
+}
+
+
+/* =========================================
+   PLANT
+========================================= */
+
+.plant {
+  position: absolute;
+
+  left: 4%;
+
+  bottom: 14%;
+
+  z-index: 5;
+
+  font-size: 75px;
+
+  color: #eeeeee;
+
+  transform: rotate(-10deg);
+}
+
+
+/* =========================================
+   CAT
+========================================= */
+
+.cat {
+  position: absolute;
+
+  right: 4%;
+
+  bottom: 12%;
+
+  z-index: 5;
+
+  font-size: 55px;
+
+  color: #eeeeee;
+
+  transform: rotate(2deg);
+}
+
+.cat span {
+  color: #ff69b4;
+
+  font-size: 24px;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.transition-path {
+  position: absolute;
+
+  left: 48px;
+  bottom: 35px;
+
+  z-index: 10;
+
+  font-size: 12px;
+
+  color: #eeeeee;
+}
+
+.transition-path span {
+  color: #ff69b4;
+}
+
+.transition-year {
+  position: absolute;
+
+  bottom: 35px;
+
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  font-size: 12px;
+
+  color: #eeeeee;
+}
+
+.transition-made {
+  position: absolute;
+
+  right: 48px;
+  bottom: 30px;
+
+  z-index: 10;
+
+  font-family: "Caveat", cursive;
+
+  font-size: 18px;
+
+  line-height: 1.1;
+
+  text-align: right;
+
+  color: #eeeeee;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 900px) {
+
+  .transition-label {
+    left: 28px;
+    top: 25px;
+  }
+
+  .transition-content {
+    width: 80%;
+  }
+
+  .transition-content h1 {
+    font-size: clamp(38px, 6vw, 55px);
+  }
+
+  .girl-wrapper {
+    left: 8%;
+
+    width: 250px;
+  }
+
+  .transition-note {
+    left: 5%;
+
+    font-size: 23px;
+  }
+
+  .checklist {
+    right: 5%;
+
+    font-size: 22px;
+  }
+
+  .paper-plane {
+    right: 6%;
+  }
+
+  .plant {
+    left: 2%;
+
+    font-size: 60px;
+  }
+
+  .cat {
+    right: 2%;
+
+    font-size: 45px;
+  }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+  .transition {
+    min-height: 100svh;
+
+    padding: 80px 20px 90px;
+
+    align-items: center;
+  }
+
+
+  /* label */
+
+  .transition-label {
+    top: 20px;
+    left: 20px;
+
+    font-size: 11px;
+  }
+
+
+  /* rain */
+
+  .transition-rain-column {
+    font-size: 9px;
+  }
+
+  .transition-tech-word {
+    font-size: 11px;
+  }
+
+
+  /* main */
+
+  .transition-content {
+    width: 100%;
+
+    margin-top: 0;
+  }
+
+  .boot-line {
+    font-size: 10px;
+
+    margin-bottom: 22px;
+
+    padding-left: 0;
+  }
+
+  .transition-content h1 {
+    font-size: clamp(30px, 9vw, 43px);
+
+    letter-spacing: -1.5px;
+
+    line-height: 1.15;
+  }
+
+  .starting-point {
+    font-size: 34px;
+
+    margin-top: 12px;
+  }
+
+
+  /* command */
+
+  .start-command {
+    margin-top: 38px;
+
+    font-size: 12px;
+  }
+
+  .start-button {
+    margin-top: 20px;
+
+    padding: 12px 18px;
+
+    font-size: 10px;
+  }
+
+
+  /* note */
+
+  .transition-note {
+    font-size: 18px;
+  }
+
+  .note-small {
+    left: 6%;
+
+    top: 23%;
+  }
+
+  .note-arrow {
+    font-size: 30px;
+
+    margin-left: 35px;
+  }
+
+
+  /* checklist */
+
+  .checklist {
+    right: 5%;
+
+    bottom: 29%;
+
+    font-size: 17px;
+  }
+
+  .check-heart {
+    font-size: 23px;
+  }
+
+
+  /* plane */
+
+  .paper-plane {
+    right: 7%;
+
+    top: 30%;
+  }
+
+  .plane {
+    font-size: 27px;
+  }
+
+  .plane-path {
+    width: 80px;
+
+    font-size: 9px;
+
+    letter-spacing: 2px;
+  }
+
+
+  /* decorations */
+
+  .star {
+    font-size: 20px;
+  }
+
+  .star-one {
+    left: 14%;
+
+    top: 46%;
+  }
+
+  .star-two {
+    right: 12%;
+
+    top: 53%;
+  }
+
+  .pink-cross {
+    left: 8%;
+
+    bottom: 37%;
+
+    font-size: 20px;
+  }
+
+  .plant {
+    left: 4%;
+
+    bottom: 7%;
+
+    font-size: 45px;
+  }
+
+  .cat {
+    right: 3%;
+
+    bottom: 8%;
+
+    font-size: 30px;
+  }
+
+  .cat span {
+    font-size: 16px;
+  }
+
+
+  /* footer */
+
+  .transition-path {
+    left: 18px;
+
+    bottom: 18px;
+
+    font-size: 8px;
+  }
+
+  .transition-year {
+    bottom: 18px;
+
+    font-size: 8px;
+  }
+
+  .transition-made {
+    right: 18px;
+
+    bottom: 15px;
+
+    font-size: 14px;
+  }
+}
+
+
+/* =========================================
+   VERY SMALL MOBILE
+========================================= */
+
+@media (max-width: 380px) {
+
+  .transition-content h1 {
+    font-size: 29px;
+  }
+
+  .starting-point {
+    font-size: 30px;
+  }
+
+  .girl-wrapper {
+    width: 165px;
+
+    bottom: 52px;
+  }
+
+  .note-small {
+    font-size: 16px;
+  }
+
+  .checklist {
+    font-size: 15px;
+  }
+
+  .start-command {
+    margin-top: 30px;
+  }
+
+  .start-button {
+    font-size: 9px;
+
+    padding: 10px 14px;
+  }
+}

@@ -1,0 +1,882 @@
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap");
+
+.achievements-section {
+  min-height: 100vh;
+  margin-left: 220px;
+  padding: 90px 70px 100px;
+  position: relative;
+  overflow: hidden;
+  background: #080808;
+  color: #f5f5f5;
+  font-family: "Space Mono", monospace;
+}
+
+/* =========================
+   BACKGROUND
+========================= */
+
+.achievements-code-bg {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+  opacity: 0.035;
+  font-size: 18px;
+  line-height: 2.5;
+}
+
+.achievements-code-bg span {
+  position: absolute;
+  white-space: nowrap;
+}
+
+.achievements-code-bg span:nth-child(1) {
+  top: 16%;
+  left: 8%;
+  transform: rotate(-8deg);
+}
+
+.achievements-code-bg span:nth-child(2) {
+  top: 35%;
+  right: -5%;
+  transform: rotate(5deg);
+}
+
+.achievements-code-bg span:nth-child(3) {
+  bottom: 18%;
+  left: 12%;
+}
+
+.achievements-code-bg span:nth-child(4) {
+  top: 65%;
+  right: 10%;
+}
+
+.achievements-code-bg span:nth-child(5) {
+  top: 82%;
+  left: 30%;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+.achievements-header {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 18px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.achievements-label {
+  font-size: 12px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.achievements-label span {
+  color: #ff4f9a;
+  margin-right: 8px;
+}
+
+.achievements-header-note {
+  position: absolute;
+  left: 43%;
+  top: -15px;
+  font-family: "Caveat", cursive;
+  font-size: 21px;
+  transform: rotate(-4deg);
+}
+
+.achievements-header-note span {
+  display: block;
+  margin-left: 90px;
+  font-size: 25px;
+}
+
+.achievements-status {
+  font-size: 10px;
+  letter-spacing: 1.5px;
+  opacity: 0.6;
+}
+
+.status-dot {
+  width: 7px;
+  height: 7px;
+  display: inline-block;
+  border-radius: 50%;
+  background: #ff4f9a;
+  margin-right: 7px;
+  box-shadow: 0 0 10px rgba(255, 79, 154, 0.6);
+}
+
+/* =========================
+   INTRO
+========================= */
+
+.achievements-intro {
+  position: relative;
+  z-index: 2;
+  margin-top: 52px;
+  margin-bottom: 34px;
+}
+
+.achievements-command {
+  font-size: 11px;
+  color: #ff4f9a;
+  margin-bottom: 15px;
+}
+
+.achievements-command span {
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+.achievements-intro h1 {
+  margin: 0;
+  font-size: clamp(42px, 5vw, 72px);
+  line-height: 0.94;
+  font-weight: 400;
+  letter-spacing: -4px;
+}
+
+.achievements-intro h1 em {
+  font-family: "Caveat", cursive;
+  color: #ff4f9a;
+  font-style: normal;
+  font-size: 1.15em;
+  letter-spacing: 0;
+}
+
+.achievements-intro p {
+  margin-top: 20px;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 10px;
+  line-height: 1.8;
+}
+
+/* =========================
+   BOARD
+========================= */
+
+.achievement-board {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: 1.35fr 1fr 1fr;
+  gap: 13px;
+  height: 280px;
+}
+
+.achievement-card {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.13);
+  background:
+    linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.035),
+      rgba(255, 255, 255, 0.008)
+    );
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.achievement-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(255, 79, 154, 0.55);
+}
+
+.achievement-card-top {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 14px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  font-size: 8px;
+  letter-spacing: 1.5px;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+/* =========================
+   LEETCODE
+========================= */
+
+.leetcode-card {
+  min-height: 280px;
+}
+
+.leetcode-content {
+  padding: 28px;
+}
+
+.leetcode-number {
+  font-size: clamp(65px, 7vw, 105px);
+  line-height: 0.8;
+  font-weight: 700;
+  letter-spacing: -7px;
+}
+
+.leetcode-number span {
+  color: #ff4f9a;
+}
+
+.leetcode-content h2 {
+  margin: 24px 0 7px;
+  font-size: 17px;
+  font-weight: 400;
+}
+
+.leetcode-content p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.45);
+  font-size: 9px;
+  line-height: 1.7;
+}
+
+.leetcode-ring {
+  position: absolute;
+  width: 75px;
+  height: 75px;
+  right: 22px;
+  bottom: 28px;
+  border: 1px dashed rgba(255, 79, 154, 0.6);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 9px;
+  color: #ff4f9a;
+  transform: rotate(10deg);
+}
+
+.leetcode-ring::before {
+  content: "";
+  position: absolute;
+  inset: 7px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 50%;
+}
+
+.leetcode-note {
+  position: absolute;
+  right: 105px;
+  bottom: 15px;
+  font-family: "Caveat", cursive;
+  font-size: 18px;
+  transform: rotate(-7deg);
+  color: rgba(255, 255, 255, 0.55);
+}
+
+/* =========================
+   MICROSOFT
+========================= */
+
+.microsoft-card {
+  min-height: 280px;
+}
+
+.microsoft-content {
+  padding: 35px 22px;
+  display: flex;
+  gap: 18px;
+  align-items: center;
+}
+
+.microsoft-icon {
+  width: 52px;
+  height: 52px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 3px;
+  transform: rotate(-3deg);
+  flex-shrink: 0;
+}
+
+.microsoft-icon span:nth-child(1) {
+  background: #f25022;
+}
+
+.microsoft-icon span:nth-child(2) {
+  background: #7fba00;
+}
+
+.microsoft-icon span:nth-child(3) {
+  background: #00a4ef;
+}
+
+.microsoft-icon span:nth-child(4) {
+  background: #ffb900;
+}
+
+.microsoft-label {
+  font-size: 7px;
+  letter-spacing: 1.5px;
+  color: rgba(255, 255, 255, 0.4);
+  margin-bottom: 8px;
+}
+
+.microsoft-content h2 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.microsoft-content p {
+  margin-top: 7px;
+  font-size: 9px;
+  color: rgba(255, 255, 255, 0.42);
+}
+
+.badge-corner {
+  position: absolute;
+  right: 16px;
+  bottom: 14px;
+  color: #ff4f9a;
+  font-size: 15px;
+}
+
+/* =========================
+   CERTIFICATE WALL
+========================= */
+
+.certificate-wall {
+  position: relative;
+  z-index: 2;
+  margin-top: 25px;
+  display: grid;
+  grid-template-columns: 145px 1fr;
+  gap: 20px;
+}
+
+.certificate-heading {
+  padding-top: 12px;
+  font-size: 9px;
+  letter-spacing: 1.5px;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.certificate-heading span {
+  color: #ff4f9a;
+  margin-right: 7px;
+}
+
+.certificate-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.certificate-card {
+  min-height: 130px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  display: grid;
+  grid-template-columns: 145px 1fr;
+  background: rgba(255, 255, 255, 0.02);
+  overflow: hidden;
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.certificate-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(255, 79, 154, 0.5);
+}
+
+.certificate-image-wrap {
+  position: relative;
+  overflow: hidden;
+  background: #111;
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.certificate-image-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  opacity: 0.82;
+  transition:
+    transform 0.4s ease,
+    opacity 0.4s ease;
+}
+
+.certificate-card:hover .certificate-image-wrap img {
+  transform: scale(1.05);
+  opacity: 1;
+}
+
+.certificate-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  background: rgba(0, 0, 0, 0.55);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  font-size: 8px;
+  letter-spacing: 1px;
+}
+
+.certificate-card:hover .certificate-overlay {
+  opacity: 1;
+}
+
+.certificate-overlay span:last-child {
+  color: #ff4f9a;
+  font-size: 13px;
+}
+
+.certificate-info {
+  display: flex;
+  gap: 12px;
+  padding: 18px 16px;
+}
+
+.certificate-number {
+  font-size: 8px;
+  color: #ff4f9a;
+}
+
+.certificate-org {
+  display: block;
+  font-size: 7px;
+  letter-spacing: 1px;
+  color: rgba(255, 255, 255, 0.4);
+  margin-bottom: 9px;
+}
+
+.certificate-info h3 {
+  margin: 0;
+  font-size: 12px;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+.certificate-year {
+  display: block;
+  margin-top: 12px;
+  font-size: 8px;
+  color: rgba(255, 255, 255, 0.35);
+}
+
+/* =========================
+   NOTES
+========================= */
+
+.achievements-note {
+  position: absolute;
+  z-index: 3;
+  font-family: "Caveat", cursive;
+  font-size: 20px;
+  line-height: 1.1;
+  color: rgba(255, 255, 255, 0.6);
+  pointer-events: none;
+}
+
+.achievements-note-one {
+  right: 35px;
+  top: 220px;
+  transform: rotate(5deg);
+}
+
+.achievements-note-two {
+  left: 250px;
+  bottom: 43px;
+  transform: rotate(-5deg);
+}
+
+/* =========================
+   BOTTOM
+========================= */
+
+.achievements-bottom-left,
+.achievements-bottom-right,
+.achievements-year {
+  position: absolute;
+  bottom: 17px;
+  z-index: 3;
+  font-size: 8px;
+  letter-spacing: 1px;
+  color: rgba(255, 255, 255, 0.28);
+}
+
+.achievements-bottom-left {
+  left: 250px;
+}
+
+.achievements-bottom-right {
+  right: 35px;
+}
+
+.achievements-year {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 1100px) {
+  .achievements-section {
+    padding-left: 45px;
+    padding-right: 45px;
+  }
+
+  .achievement-board {
+    grid-template-columns: 1.2fr 1fr;
+    height: auto;
+  }
+
+  .leetcode-card {
+    min-height: 260px;
+  }
+
+  .microsoft-card {
+    min-height: 260px;
+  }
+
+  .certificate-wall {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 800px) {
+  .achievements-section {
+    margin-left: 175px;
+    padding: 75px 30px 90px;
+  }
+
+  .achievements-header-note {
+    display: none;
+  }
+
+  .achievement-board {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .leetcode-card {
+    grid-column: span 2;
+  }
+
+  .certificate-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .achievements-note-one {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .achievements-section {
+    margin-left: 0;
+    padding: 130px 18px 90px;
+  }
+
+  .achievements-status {
+    display: none;
+  }
+
+  .achievements-intro h1 {
+    font-size: 44px;
+    letter-spacing: -2px;
+  }
+
+  .achievement-board {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+  }
+
+  .achievement-card {
+    min-height: 210px;
+  }
+
+  .leetcode-card {
+    min-height: 240px;
+  }
+
+  .certificate-card {
+    grid-template-columns: 120px 1fr;
+  }
+
+  .achievements-note-two {
+    display: none;
+  }
+
+  .achievements-bottom-left {
+    left: 18px;
+  }
+
+  .achievements-bottom-right {
+    right: 18px;
+  }
+
+  .achievements-year {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .achievement-card,
+  .certificate-card,
+  .certificate-image-wrap img {
+    transition: none;
+  }
+
+  .achievements-command span {
+    animation: none;
+  }
+}
+
+/* =========================================
+   CERTIFICATE CLICK / FULL VIEW
+========================================= */
+
+.certificate-image-wrap {
+  position: relative;
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.certificate-image-wrap img {
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: transform 0.4s ease;
+}
+
+.certificate-image-wrap:hover img {
+  transform: scale(1.025);
+}
+
+.certificate-overlay {
+  position: absolute;
+  inset: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+
+  background: rgba(8, 8, 8, 0.72);
+
+  opacity: 0;
+  transition: opacity 0.3s ease;
+
+  font-family: "Space Mono", monospace;
+  font-size: 10px;
+  letter-spacing: 2px;
+  color: #fff;
+}
+
+.certificate-image-wrap:hover .certificate-overlay {
+  opacity: 1;
+}
+
+.certificate-overlay span:last-child {
+  color: #ff4f9a;
+  font-size: 16px;
+}
+
+
+/* =========================================
+   FULL SCREEN CERTIFICATE MODAL
+========================================= */
+
+.certificate-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 40px;
+
+  background: rgba(0, 0, 0, 0.92);
+
+  animation: certificateFadeIn 0.25s ease;
+}
+
+.certificate-modal-content {
+  position: relative;
+
+  width: min(900px, 92vw);
+  max-height: 92vh;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding: 24px;
+
+  background: #090909;
+
+  border: 1px solid rgba(255, 255, 255, 0.18);
+
+  box-shadow:
+    0 0 0 1px rgba(255, 79, 154, 0.08),
+    0 25px 80px rgba(0, 0, 0, 0.8);
+}
+
+.certificate-modal-label {
+  align-self: flex-start;
+
+  margin-bottom: 18px;
+
+  font-family: "Space Mono", monospace;
+  font-size: 9px;
+  letter-spacing: 2px;
+
+  color: #ff4f9a;
+}
+
+.certificate-full-image {
+  display: block;
+
+  max-width: 100%;
+  max-height: 75vh;
+
+  width: auto;
+  height: auto;
+
+  object-fit: contain;
+
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+
+/* CLOSE BUTTON */
+
+.certificate-modal-close {
+  position: absolute;
+  top: 12px;
+  right: 14px;
+
+  z-index: 2;
+
+  width: 34px;
+  height: 34px;
+
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  background: #090909;
+
+  color: #fff;
+
+  font-family: "Space Mono", monospace;
+  font-size: 22px;
+  line-height: 1;
+
+  cursor: pointer;
+
+  transition:
+    color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.certificate-modal-close:hover {
+  color: #ff4f9a;
+  border-color: #ff4f9a;
+}
+
+
+/* MODAL FOOTER */
+
+.certificate-modal-footer {
+  width: 100%;
+
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+
+  margin-top: 14px;
+
+  font-family: "Space Mono", monospace;
+  font-size: 9px;
+  letter-spacing: 1px;
+
+  color: rgba(255, 255, 255, 0.55);
+}
+
+.certificate-modal-footer span:last-child {
+  color: #ff4f9a;
+}
+
+
+/* ANIMATION */
+
+@keyframes certificateFadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+  .certificate-modal {
+    padding: 15px;
+  }
+
+  .certificate-modal-content {
+    width: 96vw;
+    padding: 15px;
+  }
+
+  .certificate-full-image {
+    max-height: 78vh;
+  }
+
+  .certificate-modal-footer {
+    font-size: 8px;
+  }
+}
+
+
+/* =========================================
+   REDUCED MOTION
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .certificate-image-wrap img {
+    transition: none;
+  }
+
+  .certificate-overlay {
+    transition: none;
+  }
+
+  .certificate-modal {
+    animation: none;
+  }
+}
